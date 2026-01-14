@@ -17,7 +17,6 @@
           {
             "group": "Test Group",
             "pages": [
-              "guides/test-group/api-page",
               "guides/test-group/hello"
             ]
           },
