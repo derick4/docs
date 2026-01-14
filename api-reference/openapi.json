@@ -352,6 +352,15 @@
         "description": "Return all orders of count in page",
         "parameters": [
           {
+            "name": "page",
+            "in": "query",
+            "description": "query orders in which page",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
             "name": "size",
             "in": "query",
             "description": "orders count of size in one page",
