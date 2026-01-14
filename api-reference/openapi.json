@@ -148,7 +148,11 @@
             "description": "Filter users by role",
             "schema": {
               "type": "string",
-              "enum": ["admin", "user", "guest"]
+              "enum": [
+                "admin",
+                "user",
+                "guest"
+              ]
             }
           }
         ],
@@ -342,6 +346,47 @@
           }
         }
       }
+    },
+    "/orders": {
+      "get": {
+        "description": "Return all orders of count in page",
+        "parameters": [
+          {
+            "name": "size",
+            "in": "query",
+            "description": "orders count of size in one page",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Order response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "webhooks": {
@@ -445,7 +490,11 @@
           "role": {
             "description": "User role in the system",
             "type": "string",
-            "enum": ["admin", "user", "guest"],
+            "enum": [
+              "admin",
+              "user",
+              "guest"
+            ],
             "default": "user"
           },
           "createdAt": {
@@ -486,7 +535,11 @@
           "role": {
             "description": "User role in the system",
             "type": "string",
-            "enum": ["admin", "user", "guest"],
+            "enum": [
+              "admin",
+              "user",
+              "guest"
+            ],
             "default": "user"
           }
         }
@@ -512,7 +565,23 @@
           "role": {
             "description": "User role in the system",
             "type": "string",
-            "enum": ["admin", "user", "guest"]
+            "enum": [
+              "admin",
+              "user",
+              "guest"
+            ]
+          }
+        }
+      },
+      "Order": {
+        "required": [
+          "orderId"
+        ],
+        "type": "integer",
+        "properties": {
+          "orderId": {
+            "description": "The order id",
+            "type": "integer"
           }
         }
       }
