@@ -349,7 +349,7 @@
     },
     "/orders": {
       "get": {
-        "description": "Return all orders of count in page",
+        "description": "Return all orders in page",
         "parameters": [
           {
             "name": "page",
@@ -391,6 +391,19 @@
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Creates a new order",
+        "requestBody": {
+          "description": "Order to add to the store",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewOrder"
               }
             }
           }
@@ -591,6 +604,31 @@
           "orderId": {
             "description": "The order id",
             "type": "integer"
+          }
+        }
+      },
+      "NewOrder": {
+        "required": [
+          "name",
+          "price",
+          "product"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "The order's owner",
+            "type": "string",
+            "format": "name"
+          },
+          "price": {
+            "description": "The order's price",
+            "type": "float",
+            "format": "price"
+          },
+          "product": {
+            "description": "Product in order",
+            "type": "string",
+            "format": "product"
           }
         }
       }

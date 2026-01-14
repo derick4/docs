@@ -85,7 +85,8 @@
           {
             "group": "Order endpoint",
             "pages": [
-              "api-reference/endpoint/orders/get"
+              "api-reference/endpoint/orders/get",
+              "api-reference/endpoint/orders/create"
             ]
           }
         ]
