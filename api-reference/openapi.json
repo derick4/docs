@@ -434,6 +434,21 @@
       }
     },
     "/orders/{id}": {
+      "get": {
+        "description": "Get order by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "query order's id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ]
+      },
       "delete": {
         "description": "Deletes a single order based on the ID supplied",
         "parameters": [
