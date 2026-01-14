@@ -12,10 +12,10 @@ description: "yes or not? => or"
 1. 4
 2. 5
 
-| id | name | tel |
-| --- | ---- | --- |
-|    |      |     |
-|    |      |     |
+| id | name   | tel         |
+| --- | ------ | ----------- |
+| 1  | petter | \+038826783 |
+|    |        |             |
 
 <Info>
   tip: you can see this tip because you eyes are not broken!
@@ -134,3 +134,34 @@ console.log("hello javascript")
 	data: []
 }
 ```
+
+<RequestExample>
+
+``` 200
+// add code here
+{
+	service_code: "<string>",
+	country_code: <int>,
+	time: <int>,
+	value: <string>
+}
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+``` 200
+// add code here
+{
+	status: 1,
+	code: 200,
+	data: {
+		request_id: "<string>"
+	}
+}
+```
+
+</ResponseExample>
+
+$1 + 2 * 392 / 32 * 0 = 0$
