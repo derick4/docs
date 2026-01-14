@@ -67,8 +67,7 @@
           }
         ]
       }
-    ],
-    "global": {}
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
