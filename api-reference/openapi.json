@@ -369,7 +369,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Error"
+                    "$ref": "#/components/schemas/Order"
                   }
                 }
               }
@@ -577,7 +577,7 @@
         "required": [
           "orderId"
         ],
-        "type": "integer",
+        "type": "object",
         "properties": {
           "orderId": {
             "description": "The order id",
