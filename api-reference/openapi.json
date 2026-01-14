@@ -400,6 +400,7 @@
         "description": "Creates a new order",
         "requestBody": {
           "description": "Order to add to the store",
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -409,8 +410,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "Order response",
+          "201": {
+            "description": "Order created successfully",
             "content": {
               "application/json": {
                 "schema": {
@@ -639,18 +640,15 @@
         "properties": {
           "name": {
             "description": "The order's owner",
-            "type": "string",
-            "format": "name"
+            "type": "string"
           },
           "price": {
             "description": "The order's price",
-            "type": "float",
-            "format": "price"
+            "type": "number"
           },
           "product": {
             "description": "Product in order",
-            "type": "string",
-            "format": "product"
+            "type": "string"
           }
         }
       }
